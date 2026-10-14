@@ -13,12 +13,6 @@ st.caption("Built by Vanshika Nagvani | github.com/vanshika-nagvani")
 
 st.divider()
 
-api_key = st.text_input(
-    "Enter your Gemini API Key",
-    type="password",
-    placeholder="AIza..."
-)
-
 brand = st.text_input(
     "Brand Name",
     placeholder="e.g. Blinkit, Zepto, BellaVita"
@@ -36,14 +30,12 @@ target_audience = st.text_input(
 )
 
 if st.button("🔥 Roast & Rewrite", type="primary"):
-    if not api_key:
-        st.error("Please enter your Gemini API key")
-    elif not campaign:
+    if not campaign:
         st.error("Please paste a campaign to analyse")
     else:
         with st.spinner("Analysing campaign..."):
             try:
-                genai.configure(api_key=api_key)
+                genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
                 model = genai.GenerativeModel("gemini-3.8-flash")
                 prompt = f"""You are a sharp senior marketing strategist with 15 years experience at top MNCs in India.
 
