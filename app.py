@@ -465,7 +465,7 @@ if st.button("🔥 Pre-test this campaign", type="primary", width="stretch"):
         st.error("Paste a campaign first, or pick one of the samples above.")
     else:
         try:
-            with st.spinner("Running the checklist like a tired creative director..."):
+            with st.spinner("Checking strategy, scoring AIDA and writing variants... (takes about 20 seconds)"):
                 st.session_state["result"] = roast_campaign(brand.strip(), audience.strip(), campaign.strip())
                 st.session_state["result_inputs"] = (brand.strip(), campaign.strip())
         except json.JSONDecodeError:
