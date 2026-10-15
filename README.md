@@ -4,7 +4,7 @@
 
 Paste the ad copy and the target audience. The app runs the checks a marketer would do on paper before spending money: a strategy checklist, an AIDA score, warning signs, and A/B variants worth testing. It ends with a go / no-go verdict and a small test plan.
 
-👉 **[Try the live app](YOUR_STREAMLIT_LINK)** (no campaign handy? click one of the samples)
+👉 **[Try the live app](https://campaign-roaster-ai.streamlit.app/)** (no campaign handy? click one of the samples)
 
 ---
 
